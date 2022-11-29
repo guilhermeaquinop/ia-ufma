@@ -1,43 +1,19 @@
-Classe BagObject():
-    def __init__(proprio, peso, valor, indice):
-        auto.indice = indice
-        auto.peso = peso
-        auto.valor = valor
-        self.report = valor // peso
-  #Função para comparação entre must BagObjects
-  #Comparamos a proporção para classificá-los
-    def __lt__ (próprio, outro):
-        return auto.relatório < outro.relatório
+from AlgoritimoGuloso import AlgoritimoGuloso
 
+algoritimoGuloso = AlgoritimoGuloso()
 
-def getMaxValue(peso, valores, capacidade):
-        arraySort = []
-        for i in range(len (peso)):
-            arraySort. append(BagObject(peso[i], valores[i], i))
+c = 100 #CAPACIDADE MOCHILA
+n = 5 #QUANTIDADE DE ITENS A SER SELECIONADO
+p = [10, 20, 20, 30, 40] #VETOR DE PESOS DE CADA ITEM
+v = [100, 300, 400, 600, 840] #VETOR DE VALORES DE CADA ITEM
 
-        # Classific os elementos da sacola por seu relatório
-        arraySort.sort(reverse=True)
+x = algoritimoGuloso.mochilaFracionaria(c, n, p, v) #ACIONA O ALGORITMO GULOSO
 
-        valorContador = 0
-        for objeto em arraySort:
-            pesoatual = int(objeto.peso)
-            valoratual = int(objeto. valor)
-            se capacidade - peso atual >= 0:
-                # adicionamos o objeto no saco
-                # Nossos subtraímos a capacidade
-                capacidade - = peso atual
-                ValorContador += ValorAtual
-                # Nossos adicionais o valor no saco
-            mais longe:
-                rendimento = capacidade / peso atual
-                counterValue + = currentValue * inglês
-                capacitância = int (capacitância - (peso atual * receita))
-                intervalo
-        return counterValue
+v.reverse()
+p.reverse()
+x.reverse()
 
-
-peso = [1,5,3,2,4]
-valores = [10,50,20,30,60]
-capacitância = 11
-maxValue = getMaxValue (peso, valores, capacidade)
-print("Valor máximo na mochila=", maxValue)
+print("v: " + str(v))
+print("p: " + str(p))
+print("x: " + str(x))
+print("Valor total dos produtos contidos na mochila: ", round(algoritimoGuloso.getValor()))
